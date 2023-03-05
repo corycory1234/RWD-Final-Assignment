@@ -59,18 +59,23 @@
 
                 <div class="register-Fill-In">
                     <label for="email">Email Address*</label>
-                    <i class="fa-regular fa-envelope"></i>
-                    <input type="email" id="email" placeholder="請輸入mail">
+                    <div class="wrapEnvelope">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" id="email" placeholder="請輸入mail">
+                    </div>
 
                     <label for="password" class="password">Password*</label>
-                    <i class="fa-solid fa-lock"></i>
-                    <input type="password" id="password" placeholder="請輸入密碼">
+                    <div class="wrapLock">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="password" placeholder="請輸入密碼">
+                    </div>
 
-                    <div class="password2"><i class="fa-solid fa-lock" ></i></div>
-                    
-                    <input type="password" id="password" placeholder="再次確認密碼">
+                    <div class="wrapLock">
+                        <i class="fa-solid fa-lock" ></i>
+                        <input type="password" id="password" placeholder="再次確認密碼">
+                    </div>
                     <a href="login.html" class="toLogin"><span>已經有帳號了?</span></a>
-                    <a href="#" class="register-btn"><button type="submit">註冊</button></a>
+                    <button type="submit" class="register-btn"><a href="#" >註冊</a></button>
                 </div>
 
         </div>

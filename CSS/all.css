@@ -240,6 +240,13 @@ img{
 
 
 @media (max-width: 768px){
+    .intro .feature{
+        flex-direction: column;
+        align-items: center;
+    }
+    .intro li{
+        width: 50%;
+    }
     .intro-txt h3:first-child:after{
         /* width: 15%;
         margin-left: 63.5%; */
@@ -250,6 +257,9 @@ img{
         /* width: 15%;
         margin-left: 21%; */
         width: 80px;
+    }
+    .feature li p{
+        margin-bottom: 30px;
     }
 }
 
@@ -301,11 +311,24 @@ img{
     margin-bottom: 10px;
 }
 @media (max-width:768px){
+    .chef{
+        flex-direction: column;
+    }
     .chef img{
-        margin-left: 10px;
+        width: 98%;
+        margin: 0;
     }
     .chef-txt{
-        margin-right: 10px;
+        width: 90%;
+        margin: 10px 0 10px 0;
+    }
+    .chef-txt h3{
+        margin: auto;   
+        width: 100%;
+    }
+    .chef-txt p {
+        margin: auto;
+        width: 100%;
     }
 }
 
@@ -679,7 +702,7 @@ img{
 .cart-right a .fa-cart-shopping:hover{
     color: #fff;
 }
-.cart-right .account-cart p:hover{
+.cart-right .account-cart a:first-child:hover{
     color: #fff;
     font-weight: bold;
 }
@@ -716,7 +739,7 @@ img{
     margin: 5px 40px 0 0;
     position: relative;
 }
-.account-cart p:after{
+.account-cart a:first-child:after{
     content: "";
     border-right: 1px solid gray;
     margin: 0 20px;
@@ -790,6 +813,7 @@ img{
     margin-top: 5px;
     margin-left: 30%;
 }
+
 .popular-set{
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     position: absolute;
@@ -801,31 +825,20 @@ img{
 }
 
 @media (max-width: 768px){
-    .online-order .burger-info a{
-        margin: 0;
-    }
     .online-order{
-        /* flex-direction: row; */
-        width: 100%;
+        flex-direction: column;
     }
     .online-order li{
-        width: 42%;
+        width: 92%;
     }
 }
 @media  (max-width:414px){
-    .online-order{
-        flex-direction: column;
-        width: 100%;
-    }
     .online-order li{
         width: 98%;
     }
     .online-order .burger-info span::after{
         width: 27%;
         margin-left: 39%;
-    }
-    .burger-info a{
-        margin: 0;
     }
 }
 
@@ -846,6 +859,9 @@ img{
 .burger-info{
     padding: 10px 0;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 .burger-info p{
     margin:10px 0;
@@ -949,39 +965,30 @@ img{
     width: 100%;
     display: flex;
     justify-content:space-evenly;
+    margin: 20px 0;
 }
 .btn a{
-    margin: 30px 0 15px 0 ;
+    margin: 0px 0 0px 0;
+    display: block;
+    padding: 5px 45px;
+    color: #fff;
 }
 .btn button{
-    padding: 5px 45px;
     color: #fff;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
 }
 
-.btn  a:first-child button{
+.btn  button:first-child {
     background-color: darkgray;
 }
-.btn  a:last-child button{
+.btn  button:last-child{
     background-color: orangered;
 }
-.btn a button:hover{
+.btn  button:hover{
     background-color: #dfbe1d;
     color: black;
 }
-
-@media (max-width: 768px){
-    .btn{
-        /* flex-direction: column;
-        justify-content:flex-start; */
-    }
-    .btn a{
-        margin:  10px 0;
-    }
-}
-
 
 
 
@@ -1046,15 +1053,18 @@ img{
 }
 /******************* REGISTER註冊 表格填寫 *****************/
 .register-container .register-Fill-In{
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
     text-align: left;
     width: 51%;
+    /* position: relative; */
+}
+.wrapEnvelope{
     position: relative;
 }
 .register-Fill-In .fa-envelope{
     position: absolute;
-    top: 30px;
+    top: 6px;
     left: 10px;
 }
 .register-Fill-In input{
@@ -1080,16 +1090,20 @@ img{
 
 
 /******************* REGISTER註冊 LOCK圖示 **********************/
+.wrapLock{
+    position: relative;
+}
 .register-Fill-In .fa-lock{
     position: absolute;
-    top: 97px;
+    top: 6px;
     left: 10px;
 }
-.password2 >.fa-lock {
+
+/* .password2 >.fa-lock {
     position: absolute;
-    top: 140px;
+    top: 130px;
     left: 10px;
-}
+} */
 
 
 .register-Fill-In .toLogin{
@@ -1101,27 +1115,29 @@ img{
 }
 
 
-.register-btn{
+.register-btn a{
     display: block;
+    width: 100%;
+    color: #fff;
+    padding: 5px 20px;
+    
+}
+.register-btn{
+    width: 35%;
     align-self: flex-end;
     margin: 10px 15px 10px 0;
-}
-.register-btn button{
-    background-color: orangered;
-    color: #fff;
-    padding: 5px 40px;
     border-radius: 5px;
-    cursor: pointer;
+    background-color: orangered;
     border: none;
 }
-.register button:hover{
+.register-btn:hover a{
     background-color: #dfbe1d;
     color: black;
+    border-radius: 5px;
 }
 @media (max-width: 414px){
     .register-btn{
-        display: block;
+        width: 50%;
         align-self:center;
-        margin: 10px 15px 10px 0;
     }
 }
